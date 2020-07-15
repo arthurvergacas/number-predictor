@@ -24,9 +24,9 @@ To handle the problem, I made myself a <em>pixel-ish</em> class, that I could pa
 
 | Command           | Function                        |
 | ----------------- | ------------------------------- |
-| keyboard R        | Erase the content of the screen |
-| keyboard G        | Make a guess                    |
-| Left Mouse Button | Drag to draw                    |
+| Keyboard R        | Erase the content of the screen |
+| Keyboard G        | Make a guess                    |
+| Left Mouse Button | Draw                            |
 
 ### How to see the prediction
 
