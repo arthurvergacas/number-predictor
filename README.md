@@ -14,7 +14,7 @@ To handle the problem, I made myself a <em>pixel-ish</em> class, that is painted
 
 # How to use and test
 
-### The program has three only features:
+### The program has only three features:
 
 - Draw with the mouse
 - Reset the screen
