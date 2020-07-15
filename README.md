@@ -5,7 +5,7 @@
 # About
 
 This project was made with the <a href="https://pjreddie.com/projects/mnist-in-csv/">MNIST dataset of handwritten digits</a>, while the user interface was made using Pygame. <br><br>
-The neural network architecture was provided by Tensorflow library, and in this case I used one hidden layer with 128 neurons and the Rectified Linear Unit as the activation function, while the ouptut layer was activated with Softmax function. <br><br>
+The neural network architecture was provided by Tensorflow library, and in this case I used one hidden layer with 128 neurons and the Rectified Linear Unit as the activation function, while the ouptut layer was activated with the Softmax function. <br><br>
 The compiler was a standard one (adam optmization and categorical crossentropy as loss function). <br><br>
 The data was gathered from <a href="https://pjreddie.com/projects/mnist-in-csv/">this site</a>, which contains the MNIST dataset in .csv files, so I could easily work with pandas library and preprocess the data.
 <br><br>
