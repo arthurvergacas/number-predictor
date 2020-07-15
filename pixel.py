@@ -9,7 +9,7 @@ class Pixel():
         self.h = h
 
         # to define the thickness of the drawing
-        self.paintRadius = 2
+        self.paintRadius = 0
 
         # to define if it should be black or not
         self.painted = False

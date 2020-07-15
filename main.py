@@ -1,11 +1,18 @@
 import pygame
+import numpy as np
 from pixel import Pixel
+from brain import Brain
 
 
 class MainGui:
     def __init__(self):
         pygame.init()
         pygame.display.set_caption('Number Predictor')
+
+        # neural network
+        self.brain = Brain()
+        # load train data
+        self.brain.load("./nn_data/data.ckpt")
 
         self.WIDTH = 560
         self.HEIGHT = 560
@@ -27,11 +34,24 @@ class MainGui:
         self.isRunnning = True
         self.clock = pygame.time.Clock()
 
+    def getBoard(self):
+        newBoard = []
+        for pixel in self.board:
+            if pixel.painted:
+                newBoard.append(1)
+            else:
+                newBoard.append(0)
+
+        return np.array(newBoard)
+
+    def makeGuess(self, board):
+        return np.argmax(self.brain.guess(board))
+
     def run(self):
         painting = False
 
         while self.isRunnning:
-            self.clock.tick(60)
+            self.clock.tick(100)
 
             for event in pygame.event.get():
 
@@ -47,6 +67,9 @@ class MainGui:
                     if event.key == pygame.K_r:
                         for pixel in self.board:
                             pixel.painted = False
+
+                    if event.key == pygame.K_g:
+                        print(self.makeGuess(self.getBoard()))
 
             self.screen.blit(self.background, (0, 0))
 

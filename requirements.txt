@@ -1,0 +1,4 @@
+tensorflow==2.2.0
+pygame==1.9.6
+numpy==1.19.0
+pandas==1.0.5
