@@ -12,7 +12,7 @@ class MainGui:
         # neural network
         self.brain = Brain()
         # load train data
-        self.brain.load("./nn_data/data.ckpt")
+        self.brain.load("../nn_data/data.ckpt")
 
         self.WIDTH = 560
         self.HEIGHT = 560
@@ -69,7 +69,7 @@ class MainGui:
                             pixel.painted = False
 
                     if event.key == pygame.K_g:
-                        print(self.makeGuess(self.getBoard()))
+                        print(f"Prediction: {self.makeGuess(self.getBoard())}")
 
             self.screen.blit(self.background, (0, 0))
 

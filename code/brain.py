@@ -24,7 +24,7 @@ class Brain:
         Trains the model
         """
         # Gather the training data
-        training = DataHandler.loadData("./dataset/mnist_train.csv")
+        training = DataHandler.loadData("../dataset/mnist_train.csv")
         self.model.fit(training["imgs"],
                        training["labels"], epochs=10)
 
@@ -33,7 +33,7 @@ class Brain:
         Tests the model
         """
         # Gather the testing data
-        testing = DataHandler.loadData("./dataset/mnist_test.csv")
+        testing = DataHandler.loadData("../dataset/mnist_test.csv")
         loss, accuracy = self.model.evaluate(
             testing["imgs"], testing["labels"], verbose=2)
 
@@ -79,9 +79,9 @@ if __name__ == "__main__":
 
     # brain.train()
     # brain.save("./nn_data/data.ckpt")
-    brain.load("./nn_data/data.ckpt")
+    brain.load("../nn_data/data.ckpt")
     # brain.test()
-    testing = DataHandler.loadData("./dataset/mnist_test.csv")
+    testing = DataHandler.loadData("../dataset/mnist_test.csv")
 
     guess = brain.guess(testing["imgs"][0])
     index = np.argmax(guess)

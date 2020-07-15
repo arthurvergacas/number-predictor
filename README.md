@@ -27,3 +27,7 @@ To handle the problem, I made myself a <em>pixel-ish</em> class, that I could pa
 | keyboard R        | Erase the content of the screen |
 | keyboard G        | Make a guess                    |
 | Left Mouse Button | Drag to draw                    |
+
+### How to see the prediction
+
+The prediction is shown in the console that you is running the program. It is just a simple print(prediction) code
